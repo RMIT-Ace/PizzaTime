@@ -33,19 +33,21 @@ struct ContentView: View {
             NavigationLink(destination: OrderSummaryView()) {
                 Text("Place Order")
                     .foregroundStyle(.white)
+                    .background(Color("AceCoolBlue"))
             }
             Spacer()
         }
         ) { }
             .padding()
-            .background(.blue)
+//            .background(.blue)
+            .background(Color("AceCoolBlue"))
             .clipShape(Capsule())
     }
     
     @ViewBuilder
     func orderForm() -> some View {
         Form {
-
+            
             Section(header: Text("Your Name for the Order")) {
                 TextField("Your name", text: $userName)
             }
@@ -68,6 +70,7 @@ struct ContentView: View {
             }
             
             placeOrderButtonSection()
+    
 
         }
     }
